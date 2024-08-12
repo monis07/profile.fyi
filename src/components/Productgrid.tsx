@@ -1,15 +1,19 @@
 import { product_details } from "@/product_details"
 import { Productcard } from "./Productcard"
 
-export function Productgrid(){
+export default function Productgrid(){
     return (
-        <div className="grid grid-cols-4 gap-10 p-2">
+        <>
+        <p className="text-xl text-center mt-3 font-semibold">All products</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {
                 product_details.map((product)=>{
                     return <Productcard product={product}/>
                 })
             }
         </div>
+        </>
+        
     )
 
 }

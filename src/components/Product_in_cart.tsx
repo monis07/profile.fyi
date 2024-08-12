@@ -1,39 +1,23 @@
-import {useState} from 'react';
 import type { Product_details_type } from "../product_details";
 import {useCart} from "@/context/Context";
 
-
-
 export function Product_in_cart({product}:{product:Product_details_type}){
     console.log("from product_in_cart")
-    const [count,setCount] = useState(1);
     const {removefromCart,updateQuantity} = useCart();
-
-    // let price = product.price;
-    // price = price.substring(1,price.length);
-    // let actualPrice = parseInt(price);
-    // actualPrice = actualPrice * count;
-
-    const handleIncrement = () => {
-        setCount(count+1);
-    }
-
-    const handleDecrement = () => {
-        if(count!==1)
-        setCount(count-1);
-    }
 
     const handleRemove = () => {
         removefromCart(product.id);
     }
     return(
-        <div className="flex border border-sky-500 align-middle p-3 justify-between">
+        <div className="flex border border-sky-500 align-middle p-3 justify-between flex-col">
+
             <div className='flex'>
             <img src={product.image} alt="fastrack" className={"w-[80px] h-[100px] m-2"}/>
             <div>
                 <p className='m-2'>{product.name}</p>
                 <p className='m-2'>{product.description}</p>
             </div>
+
             </div>
             
             <div className='flex justify-center h-[48px] m-2 mt-9'>
