@@ -25,7 +25,7 @@ export function Productcard({product}:{product:Product_details_type}){
       <p className="text-base text-gray-600 m-2">{product.description}</p>
       <p className="text-gray-600 m-2 font-semibold text-2xl">₹{product.price}</p>
       {
-          existingItem ? <p className="m-3">Added!!!</p> : <button className="border-2  border-sky-700 p-2 bg-sky-500 text-base text-sky-50 text-center font-semibold m-3" onClick={handleCart}>Add to cart</button>
+          existingItem ? <p className="m-3">Added!!!</p> : <button className="text-center font-semibold text-white border-2 rounded-md bg-blue-500 p-2 text-base m-3" onClick={handleCart}>Add to cart</button>
       }
     </div>
     )

@@ -13,8 +13,8 @@ export default function Appbar(){
     
     return (
 
-        <div className='border-2 border-black w-full p-2 flex flex-wrap justify-between items-center bg-slate-300'>
-            <p className='sm:pl-8 mb-4'>E-commerce shopping cart using NextJS and TypeScript</p>
+        <div className='w-full p-2 flex flex-wrap justify-between items-center bg-blue-200 shadow-lg'>
+            <p className='sm:pl-8 mb-4 text-3xl font-semibold pt-4'>E-commerce</p>
 
             <div onClick={handleNavigation} className=' cursor-pointer'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 pointer">
