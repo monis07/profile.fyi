@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { Product_details_type } from "../product_details";
 import {useRouter} from "next/router";
 import {useCart} from "@/context/Context";

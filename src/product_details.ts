@@ -9,54 +9,54 @@ export interface Product_details_type{
 export const product_details:Product_details_type[] = [
     {
     "id":1,
-    "image":"./fastrack.webp",
-    "name":"Fastrack Revoltt FS1",
-    "description":"1.83 Display|BT Calling|Fastcharge|110+ Sports Mode|200+ WatchFaces Smartwatch  (Black Strap, Free Size)",
+    "image":"./1.jpg",
+    "name":"Nomad Pouch",
+    "description":"Compact Nomad Pouch keeps your essentials within reach.",
     "price":1099,
     "quantity":0
 
 },
     {
     "id":2,
-    "image":"./noise.webp",
-    "name":"Noise Icon 3 Plus",
-    "description":"Noise Icon 3 plus with 2 HD Display, Metal Dial, Functional Crown Smartwatch  (Elite Silver Strap, Regular)",
+    "image":"./2.jpg",
+    "name":"Zip Tote Basket",
+    "description":"Designed for life on the move, the Zip Tote Basket has you covered.",
     "price":1599,
     "quantity":0
 
 },
     {
     "id":3,
-    "image":"./fire_bolt.webp",
-    "name":"Fire-Boltt Rise BT",
-    "description":"Calling 47mm (1.85), Voice Assistance & 123 Sports Single BT Connection Smartwatch  (Grey Strap, Free Size)",
+    "image":"./3.jpg",
+    "name":"Basic Tee",
+    "description":"Fresh and clean, our Aspen White tee is a timeless wardrobe essential.",
     "price":1199,
     "quantity":0
 
 },
     {
     "id":4,
-    "image":"./beatxp.webp",
-    "name":"beatXP Marv Neo",
-    "description":"1.85'' HD Display Bluetooth Calling Smart Watch, Health Tracking & IP68 Smartwatch  (Mint Green Strap, Free Size)",
+    "image":"./4.jpg",
+    "name":"Basic Tee",
+    "description":"Cool and understated, the Charcoal tee adds a modern edge to any outfit",
     "price":899,
     "quantity":0
 
 },
     {
     "id":5,
-    "image":"./boatWave.webp",
-    "name":"boAt Wave Fury",
-    "description":"1.83'' HD Display, Bluetooth Calling & Functional Crown Smartwatch  (Active Black Strap, Free Size)",
+    "image":"./5.jpg",
+    "name":"ArtWork Tee",
+    "description":"Wearable art, the Artwork Tee adds creativity to your wardrobe.",
     "price":1099,
     "quantity":0
 
 },
     {
     "id":6,
-    "image":"./boultDrift.webp",
-    "name":"Boult Drift",
-    "description":"Bluetooth Calling, 1.85 HD, 500Nits Brightness, 150+ Watchfaces, SpO2 Smartwatch  (Jet Black Strap, Free Size)",
+    "image":"./6.jpg",
+    "name":"Basic Tee",
+    "description":"Sleek and versatile, this black tee is your go-to for effortless style.",
     "price":1099,
     "quantity":0
 

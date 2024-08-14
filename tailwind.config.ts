@@ -1,4 +1,6 @@
 import type { Config } from "tailwindcss";
+import aspectRatio from '@tailwindcss/aspect-ratio'
+
 
 const config: Config = {
   content: [
@@ -13,8 +15,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        sans:['var(--font-inter)', 'Inter', 'sans-serif'],
+      }
     },
   },
-  plugins: [],
+  plugins: [
+aspectRatio  ],
 };
 export default config;
