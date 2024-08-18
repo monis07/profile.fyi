@@ -1,17 +1,11 @@
-import Productgrid from "@/components/Productgrid";
 import Appbar from '@/components/Appbar'
-import T_appbar from '@/components/T_appbar'
-import T_productgrid from '@/components/T_productgrid'
+import Product_grid from '@/components/Product_grid'
 
 export default function Home() {
   return (
     <>
-    <T_appbar />
-    <T_productgrid />
-    {/* <Appbar />
-    <div>
-      <Productgrid />
-    </div> */}
+    <Appbar />
+    <Product_grid />
     </>
   );
 }

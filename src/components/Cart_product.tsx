@@ -1,10 +1,10 @@
 'use client'
 
-import type { Product_details_type } from "../product_details";
-import {useCart} from "@/context/Context";
+import type { Product_details_type } from "../data/product_details";
+import {useCart} from "@/state_management/State_management";
 
 
-export function T_product_in_cart({product}:{product:Product_details_type}) {
+export function Cart_product({product}:{product:Product_details_type}) {
     const {removefromCart,updateQuantity} = useCart();
 
     const handleRemove = () => {

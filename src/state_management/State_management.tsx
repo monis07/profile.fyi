@@ -48,7 +48,7 @@ export const useCart = create<CartState>()(
         })),
     }),
     {
-      name: 'cart-storage', // unique name for localStorage key
+      name: 'cart-storage',
     }
   )
 );

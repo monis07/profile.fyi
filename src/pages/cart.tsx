@@ -1,5 +1,5 @@
-import { useCart } from '@/context/Context'
-import {T_product_in_cart} from '@/components/T_product_in_cart'
+import { useCart } from '@/state_management/State_management'
+import {Cart_product} from '@/components/Cart_product'
 import { useRouter } from 'next/router';
 export default function cart(){
     const router = useRouter();
@@ -13,7 +13,7 @@ export default function cart(){
 
          {items.map((item)=>{
             total = total + item.price * item.quantity;
-            return <T_product_in_cart product={item}/>
+            return <Cart_product product={item}/>
          })}
 
          {/* <div className='m-10 flex justify-center items-center'>

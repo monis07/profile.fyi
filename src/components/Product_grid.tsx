@@ -1,5 +1,5 @@
-import { product_details } from "@/product_details"
-import {T_productcard}  from "@/components/T_productcard"
+import { product_details } from "@/data/product_details"
+import {Product_card}  from "@/components/Product_card"
 
   export default function Example() {
     return (
@@ -9,7 +9,7 @@ import {T_productcard}  from "@/components/T_productcard"
   
           <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {product_details.map((product) => {
-                return <T_productcard product={product} />
+                return <Product_card product={product} />
               
   })}
           </div>

@@ -1,7 +1,7 @@
-import type { Product_details_type } from "../product_details";
-import {useCart} from "@/context/Context";
+import type { Product_details_type } from "../data/product_details";
+import {useCart} from "@/state_management/State_management";
 
-export function T_productcard({product}:{product:Product_details_type}){
+export function Product_card({product}:{product:Product_details_type}){
     const {addtoCart, items} = useCart();
     let existingItem
     
