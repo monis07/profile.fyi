@@ -1,18 +1,14 @@
+// This component has the logic to how a single product in the cart looks like. It contains the product image, name, price, description, quantity and remove button.
 'use client'
 
 import type { Product_details_type } from "../data/product_details";
 import {useCart} from "@/state_management/State_management";
 
-
 export function Cart_product({product}:{product:Product_details_type}) {
-    const {removefromCart,updateQuantity} = useCart();
-
-    const handleRemove = () => {
-        removefromCart(product.id);
-    }
-
+    const {removefromCart,updateQuantity} = useCart(); //using these two functions from useCart custom hook to remove product from cart and update quantity of product in cart so that state is managed across applications. These functions are called below
+    
+    //formatting the price of the product according to Indian Currency like adding comma after 1 digit or 2 digit
     let price = (product.price * product.quantity).toString();
-
     if( price.length === 4)
     {
       price = price.substring(0,1) + "," + price.substring(1,price.length)
@@ -54,6 +50,9 @@ export function Cart_product({product}:{product:Product_details_type}) {
 
                               <div className="flex flex-1 items-center justify-between text-sm mt-3 mb-3">
 
+                                {/* Quantity buttons are used to update quantity of the product in the cart using updateQuantity function from custom hook useCart(). 
+                                This function takes two inputs, one is the product id and another one is the updated quantity. 
+                                The quantity can't go below one (as defined using Math.max below) and there is no upper limit */}
                                 <div className="flex justify-center items-center">
                                 <button onClick={() => updateQuantity(product.id, Math.max(1, product.quantity - 1))} className={"w-[30px] h-[30px] flex justify-center items-center text-2xl m-1"}>-</button>
 
@@ -62,9 +61,9 @@ export function Cart_product({product}:{product:Product_details_type}) {
                                 <button onClick={() => updateQuantity(product.id, product.quantity + 1)} className={"w-[30px] h-[30px] flex justify-center items-center text-xl m-1"}>+</button>
                                 </div>
                               
-                                {/* remove button*/}
+                                {/* remove button which removes item from the cart using removefromCart. This function takes one input that is product id*/}
                                 <div className="flex">
-                                  <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500" onClick={handleRemove}>
+                                  <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500" onClick={()=>removefromCart(product.id)}>
                                     Remove
                                   </button>
 

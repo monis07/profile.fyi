@@ -1,3 +1,6 @@
+// It contains the array of objects that we are going to display on the home page and the type of the single object.
+
+//Each object contains id, image, name, description, price, and quantity of a product.
 export interface Product_details_type{
     id:number,
     image:string,
@@ -6,6 +9,7 @@ export interface Product_details_type{
     price:number,
     quantity:number
 }
+
 export const product_details:Product_details_type[] = [
     {
     "id":1,

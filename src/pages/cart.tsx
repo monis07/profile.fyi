@@ -1,28 +1,25 @@
+// This file represents how the cart page is going to look like. It will display all the items in the cart and the total amount of the cart.
 import { useCart } from '@/state_management/State_management'
 import {Cart_product} from '@/components/Cart_product'
 import { useRouter } from 'next/router';
+
 export default function cart(){
     const router = useRouter();
-    const {items} = useCart();
-    let total = 0;
+    const {items} = useCart(); //items in cart in items array
+    let total = 0; //total amount of the cart
 
     return(
         <>
-         {/* <div className='m-2 font-semibold mb-3 text-xl'>Total no. of items in cart : {items.length}</div> */}
          <h2 className="text-2xl font-bold tracking-tight text-gray-900 m-8">Shopping Cart</h2>
 
+        {/* This map over all the items in the cart and display them one by one by passing a single item to Cart_product component.
+        items.map will return an array of Cart_product components which will be rendered on the page.*/}
          {items.map((item)=>{
-            total = total + item.price * item.quantity;
+            total = total + item.price * item.quantity; //Meanwhile total amount of the cart is also calculated here by multiplying price of each item with its quantity and adding it to the total variable.
             return <Cart_product product={item}/>
          })}
 
-         {/* <div className='m-10 flex justify-center items-center'>
-            <button className='text-center font-semibold text-white border-2 rounded-md bg-blue-500 p-2'>
-                Total amount to pay : {total}
-            </button>
-         </div> */}
-
-
+         {/* This div is used to display the total amount of the cart. The total amount is formatted according to currency like comma after 1 or 2 digit */} 
          <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                   <div className="flex justify-between text-base font-medium text-gray-900">
                     <p>Subtotal</p>
@@ -43,6 +40,7 @@ export default function cart(){
                   <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                     <p>
                       or{' '}
+                      {/* This button is used to return user to home page when clicked using useRouter Hook*/}
                       <button
                         type="button"
                         className="font-medium text-indigo-600 hover:text-indigo-500"

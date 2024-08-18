@@ -1,19 +1,15 @@
+// This component is used to display the appbar at the top of the page. It contains the logo, country icon and cart icon.
 'use client'
 
 import { ShoppingBagIcon } from '@heroicons/react/24/outline'
 import {useCart} from '@/state_management/State_management';
 import {useRouter} from 'next/router'
 
-
-
 export default function Appbar() {
-    const router = useRouter();
-
-    const handleNavigation = () => {
-        router.push('/cart')
-    }
+    // Navigation to cart.tsx page using router
+    const router = useRouter(); 
     
-    const {items} = useCart();
+    const {items} = useCart(); //items in cart are stored in items variable
 
   return (
     <div className="bg-white">
@@ -30,6 +26,7 @@ export default function Appbar() {
                   />
               </div>
 
+              {/* Country Icon */}
               <div className="ml-auto flex items-center cursor-pointer">
 
                 <div className="lg:ml-8 flex">
@@ -41,8 +38,8 @@ export default function Appbar() {
                     <span className="ml-3 block text-sm font-medium">IN</span>
                 </div>
 
-
-                  <div className="flex items-center p-2 ml-4 lg:ml-6" onClick={handleNavigation}
+                  {/*Cart Icon which displays the number of items in cart and also user is navigated to cart page on clicking cart icon*/}
+                  <div className="flex items-center p-2 ml-4 lg:ml-6" onClick={()=> router.push('/cart')}
                   >
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
