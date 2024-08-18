@@ -11,6 +11,16 @@ export function Cart_product({product}:{product:Product_details_type}) {
         removefromCart(product.id);
     }
 
+    let price = (product.price * product.quantity).toString();
+
+    if( price.length === 4)
+    {
+      price = price.substring(0,1) + "," + price.substring(1,price.length)
+    }
+    else if(price.length === 5){
+    price = price.substring(0,2) + "," + price.substring(2,price.length);
+    }
+
   return (
     
 
@@ -37,7 +47,7 @@ export function Cart_product({product}:{product:Product_details_type}) {
                                   <h3>
                                     <a>{product.name}</a>
                                   </h3>
-                                  <p className="ml-4">₹{product.price * product.quantity}</p>
+                                  <p className="ml-4">₹{price}</p>
                                 </div>
                                 <p className="mt-1 text-sm text-gray-500 w-1/2">{product.description}</p>
                               </div>
